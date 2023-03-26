@@ -18,18 +18,18 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping ("/customers")
+@RequestMapping ("/api")
 
 public class CustomerController {
     @Autowired
     CustomerService customerService;
-    @GetMapping("/{customerId}")
-    public List<CustomerModel> getGroupMed(@RequestParam("customerId")  Integer customerId){
-        System.out.println("Input customer id is :::"+ customerId);
+    @GetMapping("/getCustomer")
+    public List<CustomerModel> getGroupMed(@PathParam("custId")  Integer custId){
+        System.out.println("Input customer id is :::"+ custId);
         List<CustomerModel> customerList=  customerService.getCustomerList();
         return customerList
                 .stream()
-                .filter(q -> q.getCustomerId() ==customerId)
+                .filter(q -> q.getCustomerId() ==custId)
                 .collect(Collectors.toList());
 
        // return Arrays.asList(matchingCustomer);
