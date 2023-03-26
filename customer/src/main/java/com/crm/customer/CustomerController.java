@@ -28,7 +28,7 @@ public class CustomerController {
         System.out.println("Input customer id is :::"+ custId);
         List<CustomerModel> customerList=  customerService.getCustomerList();
         return customerList
-                .stream()
+                .stream() 
                 .filter(q -> q.getCustomerId() ==custId)
                 .collect(Collectors.toList());
 
