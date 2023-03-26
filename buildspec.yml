@@ -25,11 +25,11 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '[{"name":"customerservice","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"customerservice","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > ../imagedefinitions.json
       - cat imagedefinitions.json
 artifacts:
   files:
-   - customer/imagedefinitions.json
+   - imagedefinitions.json
    - customer/build/libs/customer-0.0.1-SNAPSHOT.jar
 
 
