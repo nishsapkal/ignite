@@ -10,7 +10,9 @@ import java.util.List;
 public class CustomerService {
 
     public List<CustomerModel> getCustomerList(){
+
         List<CustomerModel> customerList=new ArrayList<CustomerModel>();
+        //This should be coming from suite CRM DB
         customerList.add(new CustomerModel(1,"Ricky","Australia"));
         customerList.add(new CustomerModel(2,"Steve","Australia"));
         customerList.add(new CustomerModel(3,"Green","Australia"));

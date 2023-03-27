@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 public class CustomerController {
     @Autowired
     CustomerService customerService;
-    @GetMapping("/getCustomer") 
+    @GetMapping("/getCustomer")
     public List<CustomerModel> getGroupMed(@PathParam("custId")  Integer custId){
         System.out.println("Input customer id is :::"+ custId);
         List<CustomerModel> customerList=  customerService.getCustomerList();
