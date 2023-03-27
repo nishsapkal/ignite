@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class CustomerService {
 
-    public List<CustomerModel> getCustomerList(){
+    public List<CustomerModel> getCustomerList(){ 
 
         List<CustomerModel> customerList=new ArrayList<CustomerModel>();
         //This should be coming from suite CRM DB
