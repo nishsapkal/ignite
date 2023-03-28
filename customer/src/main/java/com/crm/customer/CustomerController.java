@@ -24,13 +24,13 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
     @GetMapping("/getCustomer")
-    public List<CustomerModel> getGroupMed(@PathParam("custId")  Integer custId){
-        System.out.println("Input customer id is :::"+ custId);
-        List<CustomerModel> customerList=  customerService.getCustomerList();
-        return customerList
+    public List<CustomerModel> getCustomers(){
+        //System.out.println("Input customer id is :::"+ custId);
+        return customerService.getCustomerList();
+       /* return customerList
                 .stream()
                 .filter(q -> q.getCustomerId() ==custId)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList());*/
 
        // return Arrays.asList(matchingCustomer);
     }
