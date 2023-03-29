@@ -28,7 +28,7 @@ public class CustomerController {
     }
     @GetMapping("/customer")
     @ResponseStatus(HttpStatus.OK)
-    public List<CustomerModel> returnCustomers(@PathParam("custId") Integer custId){
+    public List<CustomerModel> returnCustomers(@PathParam("custid") Integer custId){
         System.out.println("Input customer id is :::"+ custId);
         List<CustomerModel> customerList=null;
         if(custId !=null) {
