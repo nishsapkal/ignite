@@ -16,6 +16,9 @@ public class CustomerService {
         customerList.add(new CustomerModel(1,"Ricky","Australia"));
         customerList.add(new CustomerModel(2,"Steve","Australia"));
         customerList.add(new CustomerModel(3,"Green","Australia"));
+
         return customerList;
     }
+
+
 }
