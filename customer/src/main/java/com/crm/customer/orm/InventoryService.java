@@ -8,7 +8,7 @@ import java.util.List;
 @Service
 public class InventoryService {
 
-    public List<Inventory> getProductInventory(){   
+    public List<Inventory> getProductInventory(){
 
         List<Inventory> inventoryList=new ArrayList<Inventory>();
         //This should be coming from suite CRM DB
@@ -19,6 +19,6 @@ public class InventoryService {
         inventoryList.add(new Inventory("Laptop",
                 "Macbook air", 2220D,0L,false));
 
-        return  inventoryList;
+        return  inventoryList; 
         }
 }
