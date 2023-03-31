@@ -55,7 +55,7 @@ public class CustomerController {
                     .orElse(Collections.emptyList())
                     .stream()
                     .filter(q -> q.getCustomerId() == custId)
-                    .collect(Collectors.toList()); 
+                    .collect(Collectors.toList());  
         }else{
             System.out.println("Please provide customerID");
         }
