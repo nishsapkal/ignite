@@ -28,7 +28,7 @@ phases:
       - printf '[{"name":"customerservice","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > ../imagedefinitions.json
       - cat ../imagedefinitions.json 
 artifacts:
-  files:
+  files: 
    - imagedefinitions.json 
    - customer/build/libs/customer-0.0.1-SNAPSHOT.jar   
 
