@@ -8,7 +8,7 @@ phases:
       - gradle clean build
       - echo Logging in to Amazon ECR...
       - aws --version
-      - aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 968452296427.dkr.ecr.ap-southeast-1.amazonaws.com
+      - aws ecr get-login-password --region ap-southeast-1| docker login --username AWS --password-stdin 968452296427.dkr.ecr.ap-southeast-1.amazonaws.com
       - REPOSITORY_URI=968452296427.dkr.ecr.ap-southeast-1.amazonaws.com/microservices
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
